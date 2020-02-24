@@ -13,8 +13,10 @@ def save_book(n, yv_verses):
         f.write(jsonpickle.encode(yv_verses, max_depth=3))
 
 books = {}
+complete = []
 for book_number in range(1, 8):
     books[book_number] = read_book(book_number)
+    complete.extend(books[book_number])
 
 # def clean_text(yv_verse):
 #     text = yv_verse.text
@@ -26,3 +28,4 @@ for book_number in range(1, 8):
 #             clean_text.append(t.strip())
 #     yv_verse.text = clean_text
 
+breakpoint()
