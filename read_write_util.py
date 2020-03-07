@@ -40,4 +40,18 @@ def generate_complete(complete_book):
 # with open('complete.txt', 'w') as f:
 #     f.write(generate_complete(complete_book))
 
+
 breakpoint()
+
+# def get_id(v):
+#     return int(v.book * 1e6 + v.chapter * 1e3 + v.verse)
+
+# with tbl.batch_writer(overwrite_by_pkeys=['id']) as batch:
+#     for v in books[7]:
+#         batch.put_item(Item={'id': get_id(v), 'text': v.text})
+
+# count_tbl = dynamo.Table('count')
+# with count_tbl.batch_writer(overwrite_by_pkeys=['id']) as batch:
+#     for x in count_dict:
+#         batch.put_item(Item={'id': x, 'value': count_dict[x]})
+

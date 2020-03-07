@@ -10,7 +10,8 @@ def extract_yv_verse(v):
     soup2 = BeautifulSoup(v_page.text, 'html.parser')
     verse_object = YvVerse(book, chapter, verse)
     try:
-        verse_object.set_text(str(soup2.find(class_='text-sanskrit').p.contents))
+        # print(soup2.find(class_='available'))
+        verse_object.set_text(str(soup2.find(class_='available').p.contents))
     except:
         verse_object.set_text('TODO')
     return verse_object

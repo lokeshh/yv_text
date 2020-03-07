@@ -22,7 +22,7 @@ print(f"total verses = {len(verses)}")
 
 # for i, v in list(enumerate(verses))[14000:14100:10]:
 step = 20
-for i in range(28000, len(verses), step):
+for i in range(28000, 28260, step):
     try:
         print(f"{i} {verses[i].contents[1].a.contents[0]} to {verses[i+step-1].a.contents[0]}")
     except:
