@@ -39,3 +39,6 @@ def get_id(v):
 #     for x in count_dict:
 #         batch.put_item(Item={'id': x, 'value': count_dict[x]})
 
+abs = jsonpickle.decode(open(f"abs.json").read())
+for v in abs:
+    comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
