@@ -6,7 +6,7 @@ import re
 jsonpickle.set_encoder_options('json', sort_keys=True, indent=2, ensure_ascii=False)
 
 from flask import Flask, request, jsonify
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 import boto3
 
 dynamo = boto3.resource("dynamodb")
@@ -40,5 +40,6 @@ def get_id(v):
 #         batch.put_item(Item={'id': x, 'value': count_dict[x]})
 
 abs = jsonpickle.decode(open(f"abs.json").read())
+abs = [i for i in abs if i.chapter == 97]
 for v in abs:
     comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
