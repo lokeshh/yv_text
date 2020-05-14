@@ -6,5 +6,7 @@ Total number of verses = `28241`.
 
 **Source**: https://www.wisdomlib.org/hinduism/book/yoga-vasistha-sanskrit
 
+(courtesy of https://wisdomlib.org/)
+
 
 
