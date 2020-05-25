@@ -46,7 +46,12 @@ def get_id(v):
 #     for x in count_dict:
 #         batch.put_item(Item={'id': x, 'value': count_dict[x]})
 
+for i in vlm:
+    if i.book == 3 and i.chapter == 104:
+        i.text = [""]
+        abs.append(i)
+
 abs = jsonpickle.decode(open(f"abs.json").read())
-abs = [i for i in abs if i.chapter == 102]
+abs = [i for i in abs if i.chapter > 102]
 for v in abs:
     comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
