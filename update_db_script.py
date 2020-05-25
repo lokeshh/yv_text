@@ -18,6 +18,13 @@ comm_table = dynamo.Table('commentary')
 def read_complete_book():
     return jsonpickle.decode(open(f"complete_yv_core.json").read())
 
+def read(filename):
+    return jsonpickle.decode(open(filename).read())
+
+def save(data, filename):
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(jsonpickle.encode(data, max_depth=3))     
+
 def generate_complete(complete_book):
     complete_text = []
     for v in complete_book:
@@ -40,6 +47,6 @@ def get_id(v):
 #         batch.put_item(Item={'id': x, 'value': count_dict[x]})
 
 abs = jsonpickle.decode(open(f"abs.json").read())
-abs = [i for i in abs if i.chapter == 97]
+abs = [i for i in abs if i.chapter == 102]
 for v in abs:
     comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
