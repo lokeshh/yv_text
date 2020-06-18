@@ -57,6 +57,6 @@ for i in vlm:
 save(abs, 'abs.json')
 
 abs = read('abs.json')
-abs = [i for i in abs if i.chapter > 110]
+abs = [i for i in abs if i.chapter == 114]
 for v in abs:
     comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
