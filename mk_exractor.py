@@ -49,6 +49,19 @@ except:
     breakpoint()
 
 print('completed')
-save(verses, 'mk_core.json')
+# save(verses, 'mk_core.json')
+
+# def read_complete_book():
+#     return jsonpickle.decode(open(f"mk_core.json").read())
+
+# a = set()
+# verses = read_complete_book()
+# for i in verses:
+#     for j in verses:
+#         if (i.book, i.chapter, i.verse) == (j.book, j.chapter, j.verse) and i.book <= 6:
+#             if i.text < j.text:
+#                 print(i.book, i.chapter, i.verse, j.verse)
+#                 print(i.text)
+#                 print(j.text)
 
 breakpoint()
