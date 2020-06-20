@@ -43,3 +43,56 @@ for i in verses:
                 print(i.book, i.chapter, i.verse, j.verse)
                 print(i.text)
                 print(j.text)
+
+import xmltodict
+from indic_transliteration import sanscript
+from indic_transliteration.sanscript import SchemeMap, SCHEMES, transliterate
+
+def convert_to_dev(text):
+    return transliterate(text, sanscript.IAST, sanscript.DEVANAGARI)
+
+# mk_text = xmltodict.parse(open('mokshopaya.xml').read())
+
+# book_1 = mk_text['TEI']['text']['body']['div'][1]['div']
+
+# verses = []
+# for chapter in book_1:
+#     for verse in chapter['lg']:
+#         print(verse)
+#         yv_verse = YvVerse(*map(int, verse['@xml:id'].split('_')[1].split('.')))
+#         text = []
+#         for i in verse['l']:
+#             text.append(transliterate(i, sanscript.IAST, sanscript.DEVANAGARI))
+#         yv_verse.set_text(text)
+#         verses.append(yv_verse)
+
+import xml.etree.ElementTree as ET
+tree = ET.parse('mokshopaya.xml')
+root = tree.getroot()
+
+
+# import lxml.etree as etree
+
+# etree.parse("mokshopaya.xml").write("good.xml", encoding="utf-8")
+
+import xml.etree.ElementTree as ET
+tree = ET.parse('mokshopaya.xml')
+root = tree.getroot()
+
+tag_prefix = '{http://www.tei-c.org/ns/1.0}'
+id_attrib = '{http://www.w3.org/XML/1998/namespace}id'
+verses = []
+buffer = []
+for book in root[1][0]:
+    for chapter in book:
+        for node in chapter:
+            if node.tag == tag_prefix + 'p':
+                print(node.text)
+                buffer.append(convert_to_dev(node.text))
+            elif node.tag == tag_prefix + 'lg':
+                yv_verse = YvVerse(*map(int, node.attrib[id_attrib].split('_')[1].split('.')))
+                for l in node:
+                    buffer.append(convert_to_dev(l.text))
+                yv_verse.set_text(buffer)
+                buffer = []
+                verses.append(yv_verse)
