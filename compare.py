@@ -2,6 +2,8 @@ import jsonpickle
 from yv_verse import YvVerse
 from bs4 import BeautifulSoup
 import re
+from fuzzywuzzy import fuzz
+
 
 jsonpickle.set_encoder_options('json', sort_keys=True, indent=2, ensure_ascii=False)
 
@@ -36,27 +38,20 @@ def generate_complete(complete_book):
 def get_id(v):
     return int(v.book * 1e6 + v.chapter * 1e3 + v.verse)
 
+yv = read('yv_core.json')
+mk = read('mk_core.json')
 
-# with tbl.batch_writer(overwrite_by_pkeys=['id']) as batch:
-#     for v in books[7]:
-#         batch.put_item(Item={'id': get_id(v), 'text': v.text})
+missing = 0
+for x in mk:
+    for y in yv:
+        if fuzz.ratio(' '.join(x.text), ' '.join(y.text)) > 60:
+            # print('match found')
+            # print(x)
+            # print(y)
+            # print()
+            break
+    else:
+        print('no match found for ', x)
+        missing += 1
 
-# count_tbl = dynamo.Table('count')
-# with count_tbl.batch_writer(overwrite_by_pkeys=['id']) as batch:
-#     for x in count_dict:
-#         batch.put_item(Item={'id': x, 'value': count_dict[x]})
-
-vlm = read('vlm.json')
-abs = read('abs.json')
-
-for i in vlm:
-    if i.book == 3 and i.chapter in [115]:
-        i.text = [""]
-        abs.append(i)
-
-save(abs, 'abs.json')
-
-abs = read('abs.json')
-abs = [i for i in abs if i.chapter == 115]
-for v in abs:
-    comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
+print('Total missing =', missing)
