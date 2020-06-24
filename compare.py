@@ -41,17 +41,18 @@ def get_id(v):
 yv = read('yv_core.json')
 mk = read('mk_core.json')
 
-missing = 0
+scores = []
 for x in mk:
+    max_score = 0
     for y in yv:
-        if fuzz.ratio(' '.join(x.text), ' '.join(y.text)) > 60:
+        s = fuzz.ratio(' '.join(x.text), ' '.join(y.text))
+        max_score = max(s, max_score)
             # print('match found')
             # print(x)
             # print(y)
             # print()
+        if max_score > 80:
             break
-    else:
-        print('no match found for ', x)
-        missing += 1
+    scores.append((x, max_score))
 
-print('Total missing =', missing)
+breakpoint()
