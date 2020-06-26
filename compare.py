@@ -55,4 +55,19 @@ for x in mk:
             break
     scores.append((x, max_score))
 
+    # if len(scores) % 1000 == 0:
+    #     scores.sort(key = lambda x: x[1])
+    #     breakpoint()
+
 breakpoint()
+
+
+for i in scores:
+    if i[0].book == 3 and i[0].chapter == 130:
+        print(i[0].verse, i[1])
+
+
+unique_chapters = {}
+for i in scores[:500]:
+    unique_chapters[(i[0].book, i[0].chapter)] = unique_chapters.get((i[0].book, i[0].chapter), 0) + 1
+

@@ -50,13 +50,13 @@ vlm = read('vlm.json')
 abs = read('abs.json')
 
 for i in vlm:
-    if i.book == 3 and i.chapter in [117]:
+    if i.book == 3 and i.chapter in [118]:
         i.text = [""]
         abs.append(i)
 
 save(abs, 'abs.json')
 
 abs = read('abs.json')
-abs = [i for i in abs if i.chapter == 117]
+abs = [i for i in abs if i.chapter == 118]
 for v in abs:
     comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
