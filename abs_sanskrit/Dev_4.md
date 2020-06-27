@@ -3,32 +3,32 @@
 ###########################################################################
 
 
-मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते
-www।मुक्तबोध।ओर्ग्
+MUKTABODHA INDOLOGICAL RESEARCH INSTITUTE
+www.muktabodha.org
 
-©२०११ मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते अल्ल् रिघ्त्स् रेसेर्वेद्।
-
-
-ए-तेxत्स् मय् बे विएwएद् ओन्ल्य् ओन्लिने ओर् दोwन्लोअदेद् फ़ोर् प्रिवते स्तुद्य्।
-ए-तेxत्स् मय् नोत्, उन्देर् अन्य् चिर्चुम्स्तन्चेस्, बे चोपिएद्, रेपुब्लिस्हेद्,
-रेप्रोदुचेद्, दिस्त्रिबुतेद् ओर् सोल्द्, एइथेर् इन् ओरिगिनल् ओर् अल्तेरेद् फ़ोर्म्, wइथोउत्
-थे एxप्रेस्स् पेर्मिस्सिओन् ओफ़् मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते इन् wरितिन्ग्।
-दत-एन्तेरेद् ब्य् थे स्तफ़्फ़् ओफ़् मुक्तबोध उन्देर् थे दिरेच्तिओन् ओफ़् मर्क् स्। ग्। द्य्च्ज़्कोwस्कि।
+©2011 Muktabodha Indological Research Institute All Rights Reserved.
 
 
-चतलोग् नुम्बेर् : म्००३३८
-उनिफ़ोर्म् तित्ले: योगवासिष्ठ पर्त् ४ wइथ् चोम्मेन्तर्य् तात्पर्यप्रकाश
-मैन् तित्ले: योगवासिष्ठ पर्त् ४ wइथ् चोम्मेन्तर्य् तात्पर्यप्रकाश
-औथोर् : वल्मिकि
-चोम्मेन्ततोर् : आनन्दबोधेन्द्र सरस्वती
-एदितोर् : वसुदेव लxमन स्हर्म पन्सिकर्
-नोतेस्:
-दत एन्तेरेद् ब्य् थे स्तफ़्फ़् ओफ़् मुक्तबोध उन्देर् थे सुपेर्विसिओन् ओफ़् मर्क् स्। ग्। द्य्च्ज़्कोwस्कि।
+E-texts may be viewed only online or downloaded for private study.
+E-texts may not, under any circumstances, be copied, republished,
+reproduced, distributed or sold, either in original or altered form, without
+the express permission of Muktabodha Indological Research Institute in writing.
+Data-entered by the staff of Muktabodha under the direction of Mark S. G. Dyczkowski.
 
-रेविसिओन् ०: देच्। १५, २०१५
-पुब्लिचतिओन् येअर् : १९१८
-पुब्लिचतिओन् चित्य् : देल्हि
-पुब्लिचतिओन् चोउन्त्र्य् : इन्दिअ
+
+Catalog number : M00338
+Uniform title: yogavāsiṣṭha part 4 with commentary tātparyaprakāśa
+Main title: yogavāsiṣṭha part 4 with commentary tātparyaprakāśa
+Author : valmiki
+Commentator : ānandabodhendra sarasvatī
+Editor : Vasudeva Laxmana Sharma Pansikar
+Notes:
+Data entered by the staff of Muktabodha under the supervision of Mark S. G. Dyczkowski.
+
+Revision 0: Dec. 15, 2015
+Publication year : 1918
+Publication city : Delhi
+Publication country : India
 ###########################################################################
 
 
@@ -16323,15 +16323,13 @@ wइथ् थे चोम्मेन्तर्य्
 
 
 
-मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते
-©२०११ मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते  अल्ल् रिघ्त्स् रेसेर्वेद्।
+MUKTABODHA INDOLOGICAL RESEARCH INSTITUTE
+©2011 Muktabodha Indological Research Institute  All Rights Reserved.
 
 
-ए-तेxत्स् मय् बे विएwएद् ओन्ल्य् ओन्लिने ओर् दोwन्लोअदेद् फ़ोर् प्रिवते स्तुद्य्।
-ए-तेxत्स् मय् नोत्, उन्देर् अन्य् चिर्चुम्स्तन्चेस्, बे चोपिएद्, रेपुब्लिस्हेद्,
-रेप्रोदुचेद्, दिस्त्रिबुतेद् ओर् सोल्द्, एइथेर् इन् ओरिगिनल् ओर् अल्तेरेद् फ़ोर्म्, wइथोउत्
-थे एxप्रेस्स् पेर्मिस्सिओन् ओफ़् मुक्तबोध इन्दोलोगिचल् रेसेअर्छ् इन्स्तितुते इन् wरितिन्ग्।
-दत-एन्तेरेद् ब्य् थे स्तफ़्फ़् ओफ़् मुक्तबोध उन्देर् थे दिरेच्तिओन् ओफ़् मर्क् स्। ग्। द्य्च्ज़्कोwस्कि।
+E-texts may be viewed only online or downloaded for private study.
+E-texts may not, under any circumstances, be copied, republished,
+reproduced, distributed or sold, either in original or altered form, without
+the express permission of Muktabodha Indological Research Institute in writing.
+Data-entered by the staff of Muktabodha under the direction of Mark S. G. Dyczkowski.
 
-
-          
