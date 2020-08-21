@@ -50,19 +50,8 @@ vlm = read('vlm.json')
 abs = read('abs.json')
 
 for i in vlm:
-    if i.book == 4 and i.chapter in [17]:
+    if i.book == 4 and i.chapter in [18]:
         i.text = [""]
         abs.append(i)
 
 save(abs, 'abs.json')
-
-abs = read('abs.json')
-abs = [i for i in abs if i.chapter in (17,)]
-for v in abs:
-    comm_table.put_item(Item = {'id': 10000000 + get_id(v), 'text': v.text, 'author': 'abs'})
-
-# verses = read('yv_core.json')
-# verses = [i for i in verses if i.chapter in (13,)]
-# with verse_table.batch_writer(overwrite_by_pkeys=['id']) as batch:
-#     for v in verses:
-#         batch.put_item(Item={'id': get_id(v), 'text': v.text})

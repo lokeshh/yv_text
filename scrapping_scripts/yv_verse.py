@@ -7,8 +7,11 @@ class YvVerse:
         self.verse = verse
         self.text = None
 
+    def get_location(self):
+        return f"{self.book}.{self.chapter}.{self.verse}"
+
     def set_text(self, text):
         self.text = text
 
     def __repr__(self):
-        return f"{self.book}.{self.chapter}.{self.verse} {self.text}"
+        return f"{self.get_location()} {self.text}"
