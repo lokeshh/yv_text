@@ -54,8 +54,8 @@ def update_db(book, chapter):
     vlm_verses = [i for i in vlm_verses if i.book == book and i.chapter == chapter]
     abs_verses = [i for i in abs_verses if i.book == book and i.chapter == chapter]
     update_yv_core(yv_core_verses)
-    update_vlm(vlm_verses)
-    update_abs(abs_verses)
+    # update_vlm(vlm_verses)
+    # update_abs(abs_verses)
 
     
 update_db(4, 18)
