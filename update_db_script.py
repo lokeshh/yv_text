@@ -50,7 +50,7 @@ vlm = read('vlm.json')
 abs = read('abs.json')
 
 for i in vlm:
-    if i.book == 4 and i.chapter in [18]:
+    if i.book == 4 and i.chapter in [19]:
         i.text = [""]
         abs.append(i)
 
