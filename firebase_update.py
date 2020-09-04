@@ -58,5 +58,5 @@ def update_db(book, chapter):
     update_abs(abs_verses)
 
     
-update_db(4, 21)
+update_db(4, 22)
 
