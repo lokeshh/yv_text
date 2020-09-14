@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-tree = ET.parse('mokshopaya.xml')
+tree = ET.parse('mokshopaya2.xml')
 root = tree.getroot()
 import re
 from yv_verse import YvVerse
@@ -49,7 +49,7 @@ except:
     breakpoint()
 
 print('completed')
-# save(verses, 'mk_core.json')
+save(verses, 'mk_core2.json')
 
 # def read_complete_book():
 #     return jsonpickle.decode(open(f"mk_core.json").read())
