@@ -39,7 +39,7 @@ def get_id(v):
     return int(v.book * 1e6 + v.chapter * 1e3 + v.verse)
 
 yv = read('yv_core.json')
-mk = read('mk_core.json')
+mk = read('mk_core2.json')
 
 scores = []
 for x in mk:
