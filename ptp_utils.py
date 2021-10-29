@@ -25,7 +25,6 @@ def get_ptp_specific(book, chapter):
   return ptp_verses
 
 def bold(lines):
-  print(lines)
   lines[0] = "<b>" + lines[0]
   lines[-1] = lines[-1] + "</b>"
   return lines
@@ -48,10 +47,25 @@ def write_to_md(book, chapter):
   with open('test.md', 'w') as f:
     f.write("\n".join(lines))
 
-lines = generate_chapter_md_lines(6, 40)
+def add_chapter(book, chapter, verses):
+  ptp_verses = read_ptp()
+  chapter_data = {'chapter': chapter, 'content': []}
+  for i in range(1, verses + 1):
+    chapter_data['content'].append({'verse': i, 'content': [None]})
+  ptp_verses[0]['content'].append(chapter_data)
+  yaml.dump(ptp_verses, open('ptp_test.yaml', 'w'), allow_unicode=True)
+
+# add_chapter(6, 41, 59)
+
+# ptp_verses = read_ptp()
+
+lines = [
+  *generate_chapter_md_lines(6, 40),
+  *generate_chapter_md_lines(6, 41)
+]
 html_lines = []
 for line in lines:
   html_lines.append(line + "<br />")
 md_text = "\n".join(html_lines)
-with open('test.html', 'w') as f:
+with open('6(40-41).html', 'w') as f:
   f.write(md_text)
