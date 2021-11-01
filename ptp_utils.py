@@ -69,6 +69,6 @@ def generate_html(book, start_chapter, end_chapter):
   with open("output.html", 'w') as f:
     f.write(md_text)
 
-# add_chapter(6, 44, 34)
+# add_chapter(6, 45, 36)
 
-generate_html(6, 40, 44)
+generate_html(6, 40, 45)
