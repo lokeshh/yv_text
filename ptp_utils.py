@@ -53,19 +53,22 @@ def add_chapter(book, chapter, verses):
   for i in range(1, verses + 1):
     chapter_data['content'].append({'verse': i, 'content': [None]})
   ptp_verses[0]['content'].append(chapter_data)
-  yaml.dump(ptp_verses, open('ptp_test.yaml', 'w'), allow_unicode=True)
+  yaml.dump(ptp_verses, open('ptp.yaml', 'w'), allow_unicode=True)
 
-# add_chapter(6, 41, 59)
 
 # ptp_verses = read_ptp()
 
-lines = [
-  *generate_chapter_md_lines(6, 40),
-  *generate_chapter_md_lines(6, 41)
-]
-html_lines = []
-for line in lines:
-  html_lines.append(line + "<br />")
-md_text = "\n".join(html_lines)
-with open('6(40-41).html', 'w') as f:
-  f.write(md_text)
+def generate_html(book, start_chapter, end_chapter):
+  lines = []
+  for chapter in range(start_chapter, end_chapter + 1):
+    lines.extend(generate_chapter_md_lines(book, chapter))
+  html_lines = []
+  for line in lines:
+    html_lines.append(line + "<br />")
+  md_text = "\n".join(html_lines)
+  with open("output.html", 'w') as f:
+    f.write(md_text)
+
+# add_chapter(6, 43, 36)
+
+generate_html(6, 40, 43)
