@@ -11,8 +11,8 @@ def read(filename):
 def read_ptp():
   return yaml.safe_load(open('ptp.yaml', 'r').read())    
 
-cred = credentials.Certificate("/home/lokesh/Downloads/yv-api-5737d-firebase-adminsdk-qsosv-9c400a74ca.json")
-
+# cred = credentials.Certificate("/home/lokesh/Downloads/yv-api-5737d-firebase-adminsdk-qsosv-9c400a74ca.json")
+cred = credentials.Certificate("/Users/lokesh/Downloads/yv-api-5737d-firebase-adminsdk-qsosv-80e7ff07e4.json")
 
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://yv-api-5737d.firebaseio.com/'
@@ -90,9 +90,11 @@ def update_db(book, chapter):
     
 # update_db(4, 25)
 
-# mk_core_verses = read('mk_core2.json')
-# update_mk_core(mk_core_verses)
+mk_core_verses = read('mk_core2.json')
+filtered = [i for i in mk_core_verses if i.book == 6 and i.chapter > 120]
+print(len(filtered))
+update_mk_core(filtered)
 
 # update_yv_core(read('yv_core.json'))
 
-update_yv_ptp(6, 40)
+# update_yv_ptp(6, 40)
