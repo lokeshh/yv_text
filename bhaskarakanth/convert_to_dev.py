@@ -7,12 +7,12 @@ def convert_to_dev(text):
 
 
 def read_soup():
-    f = open('sa_bhAskarakaNTha-mokSopAyaTIkA.htm', 'r').read()
+    f = open('temp.html', 'r').read()
     return BeautifulSoup(f, 'html.parser')
 
 
 def write_soup(soup):
-    with open("output1.html", "w", encoding='utf-8') as f2:
+    with open("temp-output2.html", "w", encoding='utf-8') as f2:
         f2.write(str(soup))
 
 soup = read_soup()
@@ -25,11 +25,13 @@ def recurse(x):
             return
         for i in x.contents:
             recurse(i)
-    except:
+    except Exception as e:
+        print(e)
         print('Failed')
-        # print(x)
+        print(x)
         # print(x.contents)
         # breakpoint()
+        print("\n\n\n")
 
 recurse(soup)
 
