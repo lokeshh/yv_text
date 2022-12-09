@@ -7,12 +7,12 @@ def convert_to_dev(text):
 
 
 def read_soup():
-    f = open('temp.html', 'r').read()
+    f = open('nirvana-2-raw.html', 'r').read()
     return BeautifulSoup(f, 'html.parser')
 
 
 def write_soup(soup):
-    with open("temp-output2.html", "w", encoding='utf-8') as f2:
+    with open("nirvana-2-new.html", "w", encoding='utf-8') as f2:
         f2.write(str(soup))
 
 soup = read_soup()
